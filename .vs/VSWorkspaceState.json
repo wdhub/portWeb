@@ -1,12 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\public",
     "\\src",
     "\\src\\components",
     "\\src\\store",
     "\\src\\views"
   ],
-  "SelectedNode": "\\vue.config.js",
+  "SelectedNode": "\\package.json",
   "PreviewInSolutionExplorer": false
 }
