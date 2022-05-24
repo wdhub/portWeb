@@ -4,7 +4,7 @@
 
     <v-main>
       <v-container fluid>
-        <!--<SearchFormPresenter></SearchFormPresenter>-->
+          <articleView></articleView>
         <keep-alive>
           <router-view />
         </keep-alive>
@@ -15,15 +15,14 @@
 
 <script>
 import { testFirebase } from "./firebaseModel";
-//import SearchFormPresenter from "./presenters/SearchFormPresenter.vue";
+import articleView from "./views/articleView.vue";
 //import TrailDetailsPresenter from "./presenters/TrailDetailsPresenter.vue";
 
 export default {
   name: "App",
 
   components: {
-    /*SearchFormPresenter,*/
-    /*TrailDetailsPresenter,*/
+      articleView
   },
 
   data: () => ({
@@ -32,9 +31,9 @@ export default {
   mounted() {
     testFirebase();
     //setCategories(this.$store);
-    this.$store.dispatch("setCategories");
+    //this.$store.dispatch("setCategories");
     // this.$store.dispatch("setCurrentTour");
-    this.$router.push("/SearchFormView");
+    //this.$router.push("/SearchFormView");
   },
 };
 </script>

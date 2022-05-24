@@ -12,6 +12,6 @@ function testFirebase() {
   //   .set("dummy");
 
   const db = getDatabase();
-  set(ref(db, "test2/"), "test");
+  set(ref(db, "test2/"), "test22");
 }
 export { testFirebase };

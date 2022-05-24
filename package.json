@@ -1,5 +1,5 @@
 {
-  "name": "traili",
+  "name": "yawen",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -12,9 +12,10 @@
     "bootstrap": "^5.1.3",
     "bootstrap-vue": "^2.21.2",
     "core-js": "^3.8.3",
-    "firebase": "^9.6.8",
+    "firebase": "^9.6.11",
     "npm": "^8.5.5",
     "vue": "^2.6.14",
+    "vue-lazytube": "^1.0.2",
     "vue-rate": "^2.4.1",
     "vue-router": "^3.5.2",
     "vue-star-rating": "^1.7.0",

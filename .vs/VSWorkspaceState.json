@@ -5,8 +5,8 @@
     "\\src",
     "\\src\\components",
     "\\src\\store",
-    "\\tests"
+    "\\src\\views"
   ],
-  "SelectedNode": "\\src\\resolveWeather.js",
+  "SelectedNode": "\\vue.config.js",
   "PreviewInSolutionExplorer": false
 }
