@@ -4,6 +4,10 @@ import {
   getCategories as getCategoriesFetch,
   getHikeDetails,
 } from "../hikeSource.js";
+import {
+    searchFiles,
+} from "../driveHandler";
+
 import { resolvePromise } from "../resolvePromise.js";
 Vue.use(Vuex);
 
@@ -13,6 +17,9 @@ export default new Vuex.Store({
     currentTourID: "",
     categoriesPromiseState: { data: [] },
     currentTourPromiseState: { data: [] },
+
+    filePromiseState: { data: [] },
+    fileIDs:[],
   },
   getters: {
     getCategories(state) {
@@ -36,7 +43,14 @@ export default new Vuex.Store({
     },
     getCurrentTourID(state) {
       return state.currentTourID;
-    },
+      },
+
+    getFileIDs(state) {
+          return state.fileIDs;
+      },
+    getFilePromiseState(state) {
+          return state.filePromiseState;
+      },
   },
 
   mutations: {
@@ -63,7 +77,13 @@ export default new Vuex.Store({
           getHikeDetails(state.getters.getCurrentTourID),
           state.getters.getCurrentTourPromiseState
         );
-    },
+      },
+     async setFileIDs(state) {
+          resolvePromise(
+              searchFiles(),
+              state.getters.getFilePromiseState
+          );
+      },
   },
   modules: {},
 });
